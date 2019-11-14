@@ -1,0 +1,28 @@
+#right{
+	display: inline-block;
+	width: 74%;
+	vertical-align: top;
+	
+
+}
+	#cakeDisplay{
+		padding: 10px;
+		background-color: lavender
+	}
+		#shownBaker{
+			font-style: italic;
+			margin-left: 25px;
+		}
+		#shownCake{
+			margin-left: 20px;
+			border: 2px solid black;
+		}
+		#note{
+			margin-left: 200px;
+			color: grey;
+		}
+		#commentBox{
+			border: 1px solid lavender;
+			background-color: rgba(255, 99, 71, 0.5);
+			text-indent: 10px;
+		}

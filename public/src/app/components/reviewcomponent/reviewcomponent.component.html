@@ -1,0 +1,8 @@
+      <form (submit)="onComment(shownCake)">
+        <h2>Review {{ shownCake.baker}}'s cake!</h2>
+        <p><label> Your Rating: </label>
+        <input type="number" min="0" max="5" name="addedRating" [(ngModel)]="addedRating"></p>
+        <p><label> Your Comment: </label>
+        <input type="text" name="addedComment" [(ngModel)]="addedComment"></p>
+        <input type="submit" value="Add Review">
+    </form>

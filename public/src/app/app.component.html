@@ -1,0 +1,48 @@
+<div id ="wrapper">
+
+<div id= "top">
+<div id = "topForm">
+    <h2> Submit Your Cake! </h2>
+    <div id = "subForm">
+  <form (submit)="onSubmit()">
+      <p><label for="newCake.baker"> Enter Baker's Name </label>
+      <input type="text" name="newCake.baker" [(ngModel)]="newCake.baker"></p>
+      <p><label for="newCake.description"> Cake Description </label>
+      <input type="text" name="newCake.description" [(ngModel)]="newCake.description"></p>
+      <p><label for="newCake.image"> Enter Cake URL </label>
+      <input type="url" name="newCake.image" [(ngModel)]="newCake.image"></p>
+      <p><label> Vegan? </label>
+      <input type="checkbox" name="newCake.vegan" [(ngModel)]="newCake.vegan">
+      <label> Gluten-Free? </label>
+      <input type="checkbox" name="newCake.glutenfree" [(ngModel)]="newCake.glutenfree"></p>
+      <input type="submit" value="Submit Cake"></form>
+    </div>
+    <div id = "newCakeDisplay">
+    <p> Baker: {{ newCake.baker }} </p>
+    <img src = "{{ newCake.image}}" width = "300px">
+    <p> Description: {{ newCake.description }} </p>
+    <p> Vegan? {{ newCake.vegan }} | Gluten-Free? {{ newCake.glutenfree }} </p>
+    </div>
+</div>
+  <div id = "topFormTwo" *ngIf="reviewCake">
+      <app-reviewcomponent [shownCake] = "shownCake" (myEvent)="onEdit()"></app-reviewcomponent>
+      <button (click)="reviewCake = false">Cancel</button>
+  </div>
+</div>
+
+<div id = "left">
+  <div id ="cakeBox" *ngFor="let cake of cakes">
+   <p id = "baker">{{ cake.baker }}'s Cake </p>
+   <img id = "cake" src="{{ cake.image }}" width="80%" border= "2px solid black" (click)="showACake(cake)">
+ </div>
+</div>
+
+<div id = "right">
+<app-displaycomponent *ngIf="showCake" [shownCake] = "shownCake" (myEvent)="reviewCakeSwitch()"></app-displaycomponent>
+</div>
+
+<div id = "bottom">
+  This is the bottom!
+</div>
+</div>
+<router-outlet></router-outlet>

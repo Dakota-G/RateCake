@@ -1,0 +1,84 @@
+#wrapper{
+	border: 2px solid black;
+}
+
+
+#top{
+	border: 2px solid black;
+	background-color: antiquewhite;
+	padding: 15px;
+}
+
+#topForm{
+	display: inline-block;
+	width: 49%;
+	border-right: 1px solid red;
+}
+	#subForm{
+		display:inline-block;
+		width: 50%;
+	}
+	#newCakeDisplay{
+		display: inline-block;
+		width: 50%;
+		vertical-align: top;
+	}
+
+#topFormTwo{
+	display: inline-block;
+	width: 49%;
+	vertical-align: top;
+	margin-left: 15px;
+}
+
+#left{
+	display: inline-block;
+	border: 1px solid black;
+	width: 25%;
+	background-color: lavender;
+}
+
+	#cakeBox{
+		border: 1px solid black;
+		padding: 0px;
+	}
+	#baker{
+		font-style: italic;
+		font-size: 1.3em;
+		text-align: right;
+		margin-right: 55px;
+	}
+	#cake{
+		margin: 25px;
+	}
+	
+#right{
+	display: inline-block;
+	width: 74%;
+	vertical-align: top;
+
+
+}
+	#cakeDisplay{
+		padding: 10px;
+	}
+		#shownBaker{
+			font-style: italic;
+			margin-left: 25px;
+		}
+		#shownCake{
+			margin-left: 20px;
+			border: 2px solid black;
+		}
+		#note{
+			margin-left: 200px;
+			color: grey;
+		}
+		#commentBox{
+			border: 1px dotted red;
+		}
+
+#bottom{
+	border: 1px solid purple;
+}
+

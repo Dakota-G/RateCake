@@ -1,0 +1,14 @@
+  <div id ="cakeDisplay">
+    <h2 id ="shownBaker"> This Cake was submitted by: <h1>{{ shownCake.baker }}</h1> </h2><br>
+    <span id = "note">(Click on the cake image below to submit a review!)</span>
+    <img id="shownCake" src ="{{ shownCake.image }}" width="70%" (click)="callParent()"> <br>
+    <h2 id="shownDescription">Description: {{ shownCake.description }} </h2><br>
+    <h3>Vegan? {{ shownCake.vegan }} | Gluten-Free? {{ shownCake.glutenfree }}</h3><br>
+    <br>
+      Number of Reviews = {{ shownCake.reviews.length }}
+     <div id ="commentBox" *ngFor="let review of shownCake.reviews">
+      <h2>Rating: {{ review.rating }}</h2>
+     <h3> Comment: {{ review.comments }}</h3>
+      
+    </div>
+  </div>
