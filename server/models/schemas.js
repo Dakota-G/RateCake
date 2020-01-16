@@ -7,7 +7,10 @@ const CakeSchema = new mongoose.Schema({
 	vegan: { type:Boolean, default: true},
 	glutenfree: { type:Boolean, default: true},
 	image: { type: String},
-	reviews: [{ rating: {type: Number}, comments: {type: String}}]
+	reviews: 
+		{type:[{ rating: {type: Number}, 
+		comments: {type: String}}], 
+		maxlength: 5}
 	}, {timestamps: true});
 
 module.exports = mongoose.model('Cake', CakeSchema)
